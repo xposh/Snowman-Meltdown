@@ -47,6 +47,11 @@ def play_game():
 
         guess = input("Guess a letter ").lower()
 
+        # STEP 4: Input Validation (nur das)
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a single letter.")
+            continue
+
         # add guess
         guessed_letters.append(guess)
 
